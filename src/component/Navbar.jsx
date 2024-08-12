@@ -35,7 +35,7 @@ function Navbar() {
         },
     ];
     return (
-        <header className=" bg-gray-600 text-white fixed top-0 left-0 right-0">
+        <header className=" bg-gray-600 shadow shadow-white text-white fixed top-0 left-0 right-0">
             <nav className=" px-10  py-4 max-w-full mx-auto flex  justify-between items-center ">
                 <a className=" text-xl font-bold text-white" href="/">
                     RS-<span className=" text-orange-400">B</span>log{" "}
@@ -45,7 +45,7 @@ function Navbar() {
                 </a>
 
                 {/* naveItems for ig devices */}
-                <ul className=" md:flex gap-12 text-lg hidden ">
+                <ul className=" md:flex gap-12 text-lg hidden transition duration-500 ">
                     {naveItems.map(({ path, link }) => (
                         <li className="text-white" key={path}>
                             {" "}
