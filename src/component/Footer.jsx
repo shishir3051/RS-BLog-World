@@ -232,21 +232,21 @@ function Footer() {
                     </p>
                     <div className=" flex items-center gap-5 mt-4 sm:mt-0">
                         <a
-                            href=""
+                            href="https://www.twitter.com"
                             className="text-gray-500 transition-all duration-300 hover:text-orange-500"
                         >
                             {" "}
                             <FaTwitter className="h-6 w-6" />
                         </a>
                         <a
-                            href=""
+                            href="https://www.instagram.com"
                             className="text-gray-500 transition-all duration-300 hover:text-orange-500"
                         >
                             {" "}
                             <FaInstagram className="h-6 w-6" />
                         </a>
                         <a
-                            href=""
+                            href="https://www.facebook.com"
                             className="text-gray-500 transition-all duration-300 hover:text-orange-500"
                         >
                             {" "}

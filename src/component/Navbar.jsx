@@ -4,9 +4,11 @@ import { NavLink } from "react-router-dom";
 //react icons
 import { FaBars, FaFacebook, FaGithub, FaTwitter } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
+import Modal from "./Modal";
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMOdalOpen, setIsModalOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -34,6 +36,13 @@ function Navbar() {
             link: "Contact",
         },
     ];
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
     return (
         <header className=" bg-gray-600 shadow shadow-white text-white fixed top-0 left-0 right-0">
             <nav className=" px-10  py-4 max-w-full mx-auto flex  justify-between items-center ">
@@ -77,10 +86,13 @@ function Navbar() {
                         <FaTwitter />
                     </a>
 
-                    <button className=" bg-red-500 px-6 py-2 font-medium text-center rounded hover:bg-white hover:text-red-500 transition-all duration-300 ease-in ">
+                    <button onClick={openModal} className=" bg-red-500 px-6 py-2 font-medium text-center rounded hover:bg-white hover:text-red-500 transition-all duration-300 ease-in ">
                         Log in
                     </button>
                 </div>
+
+                {/* modal component */}
+                <Modal isOpen={isMOdalOpen} isClose={closeModal}/>
                 <div className="md:hidden">
                     {/* mobile menu btn */}
                     <button onClick={toggleMenu} className=" cursor-pointer">
